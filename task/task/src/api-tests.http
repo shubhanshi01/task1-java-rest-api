@@ -1,0 +1,25 @@
+### Get all tasks
+GET http://localhost:8989/api/tasks
+
+### Get task by ID
+GET http://localhost:8989/api/tasks?id=123
+
+### Create a task
+PUT http://localhost:8989/api/tasks
+Content-Type: application/json
+
+{
+  "id": "123",
+  "name": "Print Hello",
+  "owner": "John Smith",
+  "command": "echo Hello World!"
+}
+
+### Search tasks by name
+GET http://localhost:8989/api/tasks/search?name=Hello
+
+### Execute task
+PUT http://localhost:8989/api/tasks/123/execute
+
+### Delete task
+DELETE http://localhost:8989/api/tasks/123
